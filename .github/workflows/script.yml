@@ -1,9 +1,12 @@
 name: Just run
 on: workflow_dispatch
+
 jobs:
   run-it:
     runs-on: ubuntu-latest
+    env:
+      USER_NAME: "GitHub Student"
     steps:
-    - uses: actions/checkout@v4
-    - name: Run script
-      run: python3 script.py
+      - uses: actions/checkout@v4
+      - name: Run script
+        run: python3 script.py
