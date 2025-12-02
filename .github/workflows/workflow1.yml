@@ -1,7 +1,16 @@
 name: Hello
 on: workflow_dispatch
+
 jobs:
   say-hi:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, GitHub Actions!"
+      - name: Say Hello
+        run: echo "Hello, GitHub Actions!"
+
+  say-bye:
+    needs: say-hi
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Goodbye
+        run: echo "Goodbye! Ten job wykonał się po pierwszym."
