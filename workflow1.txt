@@ -1,0 +1,5 @@
+Ten workflow uruchamia się ręcznie dzięki workflow_dispatch.
+Najpierw startuje job say-hi, który wykonuje prosty krok wyświetlający tekst „Hello, GitHub Actions!”.
+Gdy ten job zakończy się poprawnie, uruchamia się drugi job say-bye, ponieważ ma ustawione needs: say-hi.
+Drugi job wypisuje własny komunikat „Goodbye!”.
+Całość pokazuje, jak można wykonywać joby w ustalonej kolejności.
